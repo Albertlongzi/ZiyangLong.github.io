@@ -1,2 +1,2 @@
 # ZiyangLong.github.io
-homepage
+This is the personal website of Ziyang Long based on vuepress.
