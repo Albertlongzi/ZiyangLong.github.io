@@ -99,7 +99,7 @@ Aug 2018 - Jan 2019|Chengdu<br></p> <ul><li>Built a green light detection module
       //arc() 方法使用一个中心点和半径，为一个画布的当前子路径添加一条弧。
       ctx.arc(this.x, this.y, this.r, 0, 360)
       ctx.closePath();
-      ctx.fillStyle = 'rgba(204, 204, 204, 0.3)';
+      ctx.fillStyle = 'rgba(255, 255, 0, 0.4)';
       ctx.fill();
     }
 
@@ -113,7 +113,7 @@ Aug 2018 - Jan 2019|Chengdu<br></p> <ul><li>Built a green light detection module
         ctx.moveTo(this.x, this.y); //起始点
         ctx.lineTo(_circle.x, _circle.y); //终点
         ctx.closePath();
-        ctx.strokeStyle = 'rgba(204, 204, 204, 0.3)';
+        ctx.strokeStyle = 'rgba(255, 215, 000, 0.4)';
         ctx.stroke();
       }
     }
@@ -183,7 +183,7 @@ Aug 2018 - Jan 2019|Chengdu<br></p> <ul><li>Built a green light detection module
     draw();
   }
 
-  window.addEventListener('load', init(60));
+  window.addEventListener('load', init(120));
 
   window.onmousemove = function(e) {
     e = e || window.event;
