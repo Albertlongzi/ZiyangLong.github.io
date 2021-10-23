@@ -121,25 +121,25 @@
     }
   }
 
-  //鼠标点画圆闪烁变动
-  // class currentCirle extends Circle {
-  //   constructor(x, y) {
-  //     super(x, y)
-  //   }
+  鼠标点画圆闪烁变动
+  class currentCirle extends Circle {
+    constructor(x, y) {
+      super(x, y)
+    }
 
-  //   drawCircle(ctx) {
-  //     ctx.beginPath();
-  //     //注释内容为鼠标焦点的地方圆圈半径变化
-  //     //this.r = (this.r < 14 && this.r > 1) ? this.r + (Math.random() * 2 - 1) : 2;
-  //     this.r = 8;
-  //     ctx.arc(this.x, this.y, this.r, 0, 360);
-  //     ctx.closePath();
-  //     //ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
-  //     ctx.fillStyle = 'rgba(255, 77, 54, 0.6)'
-  //     ctx.fill();
+    drawCircle(ctx) {
+      ctx.beginPath();
+      //注释内容为鼠标焦点的地方圆圈半径变化
+      //this.r = (this.r < 14 && this.r > 1) ? this.r + (Math.random() * 2 - 1) : 2;
+      this.r = 8;
+      ctx.arc(this.x, this.y, this.r, 0, 360);
+      ctx.closePath();
+      //ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
+      ctx.fillStyle = 'rgba(255, 77, 54, 0.6)'
+      ctx.fill();
 
-  //   }
-  // }
+    }
+  }
 
   //更新页面用requestAnimationFrame替代setTimeout
   window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -149,7 +149,7 @@
   let w = canvas.width = canvas.offsetWidth;
   let h = canvas.height = canvas.offsetHeight;
   let circles = [];
-  // let current_circle = new currentCirle(0, 0)
+  let current_circle = new currentCirle(0, 0)
 
   let draw = function() {
     ctx.clearRect(0, 0, w, h);
@@ -160,12 +160,12 @@
         circles[i].drawLine(ctx, circles[j])
       }
     }
-    // if (current_circle.x) {
-    //   current_circle.drawCircle(ctx);
-    //   for (var k = 1; k < circles.length; k++) {
-    //     current_circle.drawLine(ctx, circles[k])
-    //   }
-    // }
+    if (current_circle.x) {
+      current_circle.drawCircle(ctx);
+      for (var k = 1; k < circles.length; k++) {
+        current_circle.drawLine(ctx, circles[k])
+      }
+    }
     requestAnimationFrame(draw)
   }
 
@@ -178,16 +178,16 @@
 
   window.addEventListener('load', init(120));
 
-  // window.onmousemove = function(e) {
-  //   e = e || window.event;
-  //   current_circle.x = e.clientX;
-  //   current_circle.y = e.clientY;
-  // }
+  window.onmousemove = function(e) {
+    e = e || window.event;
+    current_circle.x = e.clientX;
+    current_circle.y = e.clientY;
+  }
 
-  // window.onmouseout = function() {
-  //   current_circle.x = null;
-  //   current_circle.y = null;
-  // }
+  window.onmouseout = function() {
+    current_circle.x = null;
+    current_circle.y = null;
+  }
   </script>
   <script>
     (function(window,document,undefined){
