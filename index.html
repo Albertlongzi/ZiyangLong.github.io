@@ -78,7 +78,7 @@
     constructor(x, y) {
       this.x = x;
       this.y = y;
-      this.r = Math.random() * 10;
+      this.r = Math.random() * 8;
       this._mx = Math.random();
       this._my = Math.random();
 
@@ -92,7 +92,7 @@
       //arc() 方法使用一个中心点和半径，为一个画布的当前子路径添加一条弧。
       ctx.arc(this.x, this.y, this.r, 0, 360)
       ctx.closePath();
-      ctx.fillStyle = 'rgba(33, 133, 208, 0.2)';
+      ctx.fillStyle = 'rgba(218, 222, 224, 0.2)';
       ctx.fill();
     }
 
@@ -106,7 +106,7 @@
         ctx.moveTo(this.x, this.y); //起始点
         ctx.lineTo(_circle.x, _circle.y); //终点
         ctx.closePath();
-        ctx.strokeStyle = 'rgba(33, 133, 208, 0.1)';
+        ctx.strokeStyle = 'rgba(186, 193, 197, 0.1)';
         ctx.stroke();
       }
     }
@@ -122,24 +122,24 @@
   }
 
   //鼠标点画圆闪烁变动
-  class currentCirle extends Circle {
-    constructor(x, y) {
-      super(x, y)
-    }
+  // class currentCirle extends Circle {
+  //   constructor(x, y) {
+  //     super(x, y)
+  //   }
 
-    drawCircle(ctx) {
-      ctx.beginPath();
-      //注释内容为鼠标焦点的地方圆圈半径变化
-      //this.r = (this.r < 14 && this.r > 1) ? this.r + (Math.random() * 2 - 1) : 2;
-      this.r = 8;
-      ctx.arc(this.x, this.y, this.r, 0, 360);
-      ctx.closePath();
-      //ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
-      ctx.fillStyle = 'rgba(255, 77, 54, 0.6)'
-      ctx.fill();
+  //   drawCircle(ctx) {
+  //     ctx.beginPath();
+  //     //注释内容为鼠标焦点的地方圆圈半径变化
+  //     //this.r = (this.r < 14 && this.r > 1) ? this.r + (Math.random() * 2 - 1) : 2;
+  //     this.r = 8;
+  //     ctx.arc(this.x, this.y, this.r, 0, 360);
+  //     ctx.closePath();
+  //     //ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
+  //     ctx.fillStyle = 'rgba(255, 77, 54, 0.6)'
+  //     ctx.fill();
 
-    }
-  }
+  //   }
+  // }
 
   //更新页面用requestAnimationFrame替代setTimeout
   window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -149,7 +149,7 @@
   let w = canvas.width = canvas.offsetWidth;
   let h = canvas.height = canvas.offsetHeight;
   let circles = [];
-  let current_circle = new currentCirle(0, 0)
+  // let current_circle = new currentCirle(0, 0)
 
   let draw = function() {
     ctx.clearRect(0, 0, w, h);
