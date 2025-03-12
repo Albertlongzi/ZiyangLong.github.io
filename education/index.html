@@ -24,6 +24,28 @@
     <link rel="preload" href="/assets/js/2.21222870.js" as="script">
     <link rel="preload" href="/assets/js/16.30e39027.js" as="script">
     <link rel="stylesheet" href="/assets/css/0.styles.4d112c21.css">
+    <style>
+      .education-timeline {
+        margin: 2rem 0;
+      }
+
+      .education-entry {
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        border-left: 3px solid #3eaf7c;
+      }
+
+      .education-entry h3 {
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+      }
+
+      .degree {
+        font-style: italic;
+        color: #6a8bad;
+        margin-bottom: 0.5rem;
+      }
+    </style>
   </head>
   <body>
     <div id="app" data-server-rendered="true">
@@ -31,7 +53,7 @@
         <header class="navbar">
           <div class="sidebar-button">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon">
-              <path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627 5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627 5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12-5.373 12 12v32c0 6.627 5.373 12-12 12z"></path>
+              <path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627 5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627 5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627 5.373 12-12 12z"></path>
             </svg>
           </div> 
           <a href="/" class="home-link router-link-active">
@@ -78,8 +100,24 @@
               <video src="/education/school.mp4" controls="controls" autoplay="autoplay" width="100%" height="100%">您的浏览器不支持播放该视频！</video>
             </div> 
             <blockquote>
-              <p>This is Ziyang Long, once majoring in Electronic Information Engineering at Glasgow College, University of Electronic Science and Technology of China, and frequently involved in circuit design and analysis. For now, I am pursuing a Ph.D. degree in Bioengineering at UCLA. My current research interests revolve around the MRI technique.</p>
+              <p>This is Ziyang Long, majoring in Electronic Information Engineering at Glasgow College, University of Electronic Science and Technology of China (2018-2022). I focused on circuit design, signal processing, and embedded systems development. Currently, I am pursuing a Ph.D. in Bioengineering at UCLA, where I research advanced MRI techniques and their applications in medical imaging. My academic journey combines electronic engineering fundamentals with cutting-edge biomedical research.</p>
             </blockquote>
+
+            <h2>Education Timeline</h2>
+            <div class="education-timeline">
+              <div class="education-entry">
+                <h3>University of California, Los Angeles (UCLA)</h3>
+                <p class="degree">Ph.D. in Bioengineering | 2022 - Present</p>
+                <p>Focusing on advanced MRI techniques and medical imaging applications</p>
+              </div>
+              
+              <div class="education-entry">
+                <h3>Glasgow College, University of Electronic Science and Technology of China</h3>
+                <p class="degree">B.Eng. in Electronic Information Engineering | 2018 - 2022</p>
+                <p>Specialized in circuit design and analysis with international curriculum</p>
+              </div>
+            </div>
+
             <p><img src="/education/school.jpg" alt="my school"></p>
             <hr> 
             <hr>
